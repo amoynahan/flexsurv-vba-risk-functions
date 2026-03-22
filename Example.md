@@ -2,9 +2,13 @@
 
 ## Overview
 
-This example shows how survival functions implemented in Excel VBA reproduce results from `flexsurv` in R.
+This example is based on the **"Survival-Test"** tab from the Excel workbook:
 
-Model parameters are estimated in R, mapped to the correct distribution inputs, and then used in VBA functions to compute survival probabilities S(t) across a time grid.
+**Flexsurv functions with flexsurv cure functions.xlsm**
+
+The sheet demonstrates how survival functions implemented in Excel VBA reproduce results from `flexsurv` in R.
+
+Model parameters estimated in R are mapped to distribution-specific inputs and then evaluated using VBA survival functions to compute S(t) across a time grid.
 
 ---
 

@@ -43,7 +43,9 @@ S(t) = survival probability at time t
 
 ## Survival Function Implementations
 
-Each function evaluates S(t) (survival probability) over the time grid `A18:A58` using parameters from the workbook.
+Parameters are taken directly from `flexsurv` output and mapped to VBA inputs.
+
+Each function evaluates S(t) (survival probability) over the time grid `A18:A58`.
 
 | Distribution | VBA Function Call | Parameters | Notes |
 |-------------|------------------|-----------|------|
@@ -58,7 +60,6 @@ Each function evaluates S(t) (survival probability) over the time grid `A18:A58`
 | Gen. Gamma (orig) | `=Sgengamma_orig(A18:A58, B11, C11, D11)` | mu, sigma, Q | flexsurv internal form |
 | Generalized F | `=Sgenf(A18:A58, B10, C10, D10, E10)` | mu, sigma, Q, P | Most flexible |
 | Gen. F (orig) | `=Sgenf_orig(A18:A58, B12, C12, D12, E12)` | mu, sigma, Q, P | flexsurv internal form |
-
 
 
 using the same time grid (`A18:A58`) and distribution-specific parameters.

@@ -41,4 +41,24 @@ using the same time grid (`A18:A58`) and distribution-specific parameters.
 
 S(t) = survival probability at time t
 
+## Survival Function Implementations
+
+Each function evaluates S(t) (survival probability) over the time grid `A18:A58` using parameters from the workbook.
+
+| Distribution | VBA Function Call | Parameters | Notes |
+|-------------|------------------|-----------|------|
+| Exponential | `=sexp(A18:A58, B2)` | rate | Constant hazard |
+| Weibull | `=Sweibull(A18:A58, B3, C3)` | scale, shape | Matches flexsurv default |
+| WeibullPH | `=SweibullPH(A18:A58, B4, C4)` | scale, shape | Proportional hazards form |
+| Gompertz | `=Sgompertz(A18:A58, B5, C5)` | rate, shape | Exponentially changing hazard |
+| Gamma | `=Sgamma(A18:A58, B6, C6)` | rate, scale | Flexible parametric form |
+| Log-logistic | `=Sllogis(A18:A58, B7, C7)` | shape, scale | Non-monotonic hazard |
+| Log-normal | `=Slnorm(A18:A58, B8, C8)` | meanlog, sdlog | Non-monotonic hazard |
+| Generalized Gamma | `=Sgengamma(A18:A58, B9, C9, D9)` | mu, sigma, Q | Includes Weibull/log-normal |
+| Gen. Gamma (orig) | `=Sgengamma_orig(A18:A58, B11, C11, D11)` | mu, sigma, Q | flexsurv internal form |
+| Generalized F | `=Sgenf(A18:A58, B10, C10, D10, E10)` | mu, sigma, Q, P | Most flexible |
+| Gen. F (orig) | `=Sgenf_orig(A18:A58, B12, C12, D12, E12)` | mu, sigma, Q, P | flexsurv internal form |
+
+
+
 using the same time grid (`A18:A58`) and distribution-specific parameters.

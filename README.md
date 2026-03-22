@@ -11,13 +11,15 @@ VBA implementations of risk functions for `flexsurv` and `flexsurvcure` parametr
 - Loglogistic
 - Generalized gamma
 - Generalized F
+- RCS (odds, normal, hazard)
+- Mixture models
 
 ## Functions included
 
 - Survival (S)
-- Density (PDF)
+- Density (d)
 - Hazard (h)
-- Cumulative hazard (H)
+- Cumulative hazard (ch)
 - Quantile functions
 
 ## Purpose

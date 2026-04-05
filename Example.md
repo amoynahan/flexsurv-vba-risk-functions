@@ -61,5 +61,4 @@ Each function evaluates S(t) (survival probability) over the time grid `A18:A58`
 | Generalized F | `=Sgenf(A18:A58, B10, C10, D10, E10)` | mu, sigma, Q, P | Most flexible |
 | Gen. F (orig) | `=Sgenf_orig(A18:A58, B12, C12, D12, E12)` | mu, sigma, Q, P | flexsurv internal form |
 
-
 using the same time grid (`A18:A58`) and distribution-specific parameters.
